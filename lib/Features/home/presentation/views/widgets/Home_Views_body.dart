@@ -1,5 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:aniflix_app/Features/home/presentation/views/widgets/customAppBar.dart';
-import 'package:aniflix_app/core/utils/style.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewsBody extends StatelessWidget {
