@@ -1,3 +1,4 @@
+import 'package:aniflix_app/Features/home/presentation/views/widgets/customAppBar.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewsBody extends StatelessWidget {
@@ -5,8 +6,8 @@ class HomeViewsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column( 
-      
+    return SafeArea(
+      child: Column(children: [SizedBox(height: 30), Customappbar()]),
     );
   }
 }
