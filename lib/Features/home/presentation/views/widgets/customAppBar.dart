@@ -18,6 +18,7 @@ class Customappbar extends StatelessWidget {
             height: 80,
             decoration: BoxDecoration(
               color: colorFontRegulartitle,
+
               borderRadius: BorderRadius.circular(250),
               image: DecorationImage(
                 image: AssetImage(AssetsData.imageuser),
@@ -38,7 +39,7 @@ class Customappbar extends StatelessWidget {
               Text(
                 "Maria",
                 style: Style.textStyle14.copyWith(
-                  fontSize: 20,
+                  fontSize: 30,
                   fontWeight: FontWeight.w700,
                 ),
               ),
