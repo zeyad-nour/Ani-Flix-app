@@ -4,4 +4,5 @@ class AssetsData {
   static const imageRelease = 'assets/images/movie1.png';
   static const suggetionvideoCoverOne = 'assets/images/Rectangle6.png';
   static const suggetionvideoCoverTow = 'assets/images/Rectangle7.png';
+  static const forYouVideoCover = 'assets/images/Rectangle34.png';
 }
