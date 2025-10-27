@@ -7,4 +7,5 @@ class AssetsData {
   static const forYouVideoCover = 'assets/images/Rectangle34.png';
   static const moviesCategories = 'assets/images/Movienobg1.png';
   static const animesCategories = 'assets/images/Animenobg1.png';
+  static const mostsearchTow = 'assets/images/Rectangle33.png';
 }

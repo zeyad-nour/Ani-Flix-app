@@ -11,7 +11,7 @@ class CustomSearchCategories extends StatelessWidget {
     return Container(
       alignment: Alignment.centerLeft,
       width: MediaQuery.sizeOf(context).width * 0.92,
-      height: MediaQuery.sizeOf(context).height * 0.50,
+      height: MediaQuery.sizeOf(context).height * 0.25,
       decoration: BoxDecoration(color: kBackgroundColor),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
