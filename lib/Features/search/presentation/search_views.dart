@@ -1,3 +1,4 @@
+import 'package:aniflix_app/Features/search/presentation/widget/custom_search_Categories.dart';
 import 'package:aniflix_app/Features/search/presentation/widget/custom_search_field.dart';
 import 'package:aniflix_app/constant.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,8 @@ class SearchViews extends StatelessWidget {
               padding: EdgeInsetsGeometry.symmetric(horizontal: 25),
               child: CustomSearchField(),
             ),
+            SizedBox(height: 50),
+            CustomSearchCategories(),
           ],
         ),
       ),
