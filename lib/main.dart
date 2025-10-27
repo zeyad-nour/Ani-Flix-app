@@ -1,4 +1,4 @@
-import 'package:aniflix_app/Features/home/presentation/views/home_views.dart';
+import 'package:aniflix_app/Features/details/presentation/detailes_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
-      home: HomeViews(),
+      home: DetailesView(),
     );
   }
 }
