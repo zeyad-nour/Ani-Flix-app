@@ -1,9 +1,12 @@
 // ignore_for_file: file_names
 
+import 'package:aniflix_app/Features/search/presentation/search_views.dart';
 import 'package:aniflix_app/constant.dart';
 import 'package:aniflix_app/core/utils/assets.dart';
 import 'package:aniflix_app/core/utils/style.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class Customappbar extends StatelessWidget {
   const Customappbar({super.key});
@@ -49,7 +52,16 @@ class Customappbar extends StatelessWidget {
           ),
           // Image.asset(AssetsData.appBarIcon),
           Spacer(),
-          Icon(Icons.list, size: 40),
+          IconButton(
+            onPressed: () {
+              Get.to(
+                () => SearchViews(),
+                transition: Transition.upToDown,
+                duration: kTransitionDurition,
+              );
+            },
+            icon: Icon(Icons.search, size: 40),
+          ),
         ],
       ),
     );

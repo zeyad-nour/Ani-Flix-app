@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:aniflix_app/constant.dart';
 import 'package:aniflix_app/core/utils/assets.dart';
 import 'package:aniflix_app/core/utils/style.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:aniflix_app/Features/home/presentation/views/widgets/custom_video_cover_ForYou.dart';
 import 'package:aniflix_app/core/utils/style.dart';
 import 'package:flutter/material.dart';

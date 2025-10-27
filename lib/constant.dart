@@ -7,3 +7,5 @@ const colorFontRegularwhite = Color(0xffE8E8E8);
 const colorFontRegulartitle = Color(0xff868686);
 const colorRatingStar= Color(0xffE7C825);
 
+const kTransitionDurition = Duration(seconds: 3);
+

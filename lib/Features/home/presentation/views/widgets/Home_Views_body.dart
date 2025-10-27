@@ -12,17 +12,19 @@ class HomeViewsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: [
-          SizedBox(height: 30),
-          Customappbar(),
-          SizedBox(height: 50),
-          CustomReleaseWidget(),
-          SizedBox(height: 16),
-          CustomContinueWatching(),
-          SizedBox(height: 20),
-          CustomForyouWidget(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 30),
+            Customappbar(),
+            SizedBox(height: 50),
+            CustomReleaseWidget(),
+            SizedBox(height: 16),
+            CustomContinueWatching(),
+            SizedBox(height: 20),
+            CustomForyouWidget(),
+          ],
+        ),
       ),
     );
   }
