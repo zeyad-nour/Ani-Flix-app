@@ -22,7 +22,7 @@ class CustomVideoCoverForyou extends StatelessWidget {
                 width: MediaQuery.sizeOf(context).width * 0.30,
                 height: MediaQuery.sizeOf(context).height * 0.15,
                 decoration: BoxDecoration(
-                  color: Colors.amber,
+                  color: colorFontRegulartitle,
                   borderRadius: BorderRadius.circular(50),
                   image: DecorationImage(
                     image: AssetImage(AssetsData.forYouVideoCover),

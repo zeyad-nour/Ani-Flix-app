@@ -1,10 +1,11 @@
-
 // ignore_for_file: file_names
 
+import 'package:aniflix_app/Features/details/presentation/detailes_view.dart';
 import 'package:aniflix_app/constant.dart';
 import 'package:aniflix_app/core/utils/assets.dart';
 import 'package:aniflix_app/core/utils/style.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ContinueWatchingVidwosSuggetion extends StatelessWidget {
   const ContinueWatchingVidwosSuggetion({super.key});
@@ -19,17 +20,26 @@ class ContinueWatchingVidwosSuggetion extends StatelessWidget {
           (index) => Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                margin: EdgeInsets.all(10),
-                width: MediaQuery.sizeOf(context).width * 0.50,
+              InkWell(
+                onTap: () {
+                  Get.to(
+                    () => DetailesView(),
+                    transition: Transition.leftToRight,
+                    duration: kTransitionDurition,
+                  );
+                },
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  width: MediaQuery.sizeOf(context).width * 0.50,
 
-                height: MediaQuery.sizeOf(context).height * 0.20,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: colorFontRegularsecound,
-                  image: DecorationImage(
-                    image: AssetImage(AssetsData.suggetionvideoCoverOne),
-                    fit: BoxFit.cover,
+                  height: MediaQuery.sizeOf(context).height * 0.20,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: colorFontRegularsecound,
+                    image: DecorationImage(
+                      image: AssetImage(AssetsData.suggetionvideoCoverOne),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),

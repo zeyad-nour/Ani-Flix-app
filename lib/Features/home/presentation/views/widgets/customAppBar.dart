@@ -50,13 +50,12 @@ class Customappbar extends StatelessWidget {
               ),
             ],
           ),
-          // Image.asset(AssetsData.appBarIcon),
           Spacer(),
           IconButton(
             onPressed: () {
               Get.to(
                 () => SearchViews(),
-                transition: Transition.upToDown,
+                transition: Transition.downToUp,
                 duration: kTransitionDurition,
               );
             },
