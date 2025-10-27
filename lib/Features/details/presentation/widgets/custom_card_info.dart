@@ -18,23 +18,19 @@ class CustomCardInfo extends StatelessWidget {
       width: 180,
       height: 70,
       decoration: BoxDecoration(
-        color: const Color(0xFF1E1E1E), // لون الخلفية الغامق
+        color: Colors.black,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         children: [
-          // الصورة الدائرية
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             child: Container(
               width: 50,
               height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(
-                  width: 2,
-                  color: Colors.purpleAccent, // لون الإطار (Gradient ممكن كمان)
-                ),
+                border: Border.all(width: 2, color: Colors.purpleAccent),
                 image: DecorationImage(
                   // image: NetworkImage(imageUrl),
                   image: AssetImage(imageUrl),
@@ -44,7 +40,6 @@ class CustomCardInfo extends StatelessWidget {
             ),
           ),
 
-          // الاسم والدور
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,6 +54,7 @@ class CustomCardInfo extends StatelessWidget {
               Text(
                 "As $role",
                 style: TextStyle(
+                  // ignore: deprecated_member_use
                   color: Colors.white.withOpacity(0.7),
                   fontSize: 13,
                 ),

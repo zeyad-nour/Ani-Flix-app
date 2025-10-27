@@ -1,9 +1,9 @@
-import 'package:aniflix_app/Features/details/presentation/widgets/custom_card_info.dart';
+import 'package:aniflix_app/Features/details/presentation/widgets/custom_button.dart';
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_description_iteam.dart';
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_image_iteam.dart';
+import 'package:aniflix_app/Features/details/presentation/widgets/custom_list_view_card.dart';
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_nameandtitle_iteam.dart';
 import 'package:aniflix_app/constant.dart';
-import 'package:aniflix_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class DetailesView extends StatelessWidget {
@@ -19,28 +19,9 @@ class DetailesView extends StatelessWidget {
           CustomNameandtitleIteam(),
           SizedBox(height: 20),
           CustomDescriptionIteam(),
-
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: 4,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 4,
-                crossAxisSpacing: 30,
-                mainAxisSpacing: 30,
-              ),
-              itemBuilder: (context, index) {
-                return CustomCardInfo(
-                  imageUrl: AssetsData.imageRelease,
-                  name: "Maria Espaes",
-                  role: "As Morbius",
-                );
-              },
-            ),
-          ),
+          CustomListViewCard(),
+          SizedBox(height: 16),
+          GradientButton(),
         ],
       ),
     );
