@@ -1,3 +1,4 @@
+import 'package:aniflix_app/Features/details/presentation/widgets/custom_description_iteam.dart';
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_image_iteam.dart';
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_nameandtitle_iteam.dart';
 import 'package:aniflix_app/constant.dart';
@@ -12,8 +13,10 @@ class DetailesView extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       body: Column(
         children: [
-      CustomImageIteam(),
-      CustomNameandtitleIteam()
+          CustomImageIteam(),
+          CustomNameandtitleIteam(),
+          SizedBox(height: 20),
+          CustomDescriptionIteam(),
         ],
       ),
     );
