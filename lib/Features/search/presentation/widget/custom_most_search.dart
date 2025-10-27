@@ -32,7 +32,7 @@ class CustomMostSearch extends StatelessWidget {
               Text("Secret Wars", style: Style.textStyle16),
               SizedBox(height: 7),
               Text(
-                "2022",
+                "2024",
                 style: Style.textStyle16.copyWith(
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
