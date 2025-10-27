@@ -3,6 +3,7 @@
 import 'package:aniflix_app/Features/home/presentation/views/widgets/CustomReleaseWidget.dart';
 import 'package:aniflix_app/Features/home/presentation/views/widgets/customAppBar.dart';
 import 'package:aniflix_app/Features/home/presentation/views/widgets/custom_Continue_Watching.dart';
+import 'package:aniflix_app/Features/home/presentation/views/widgets/custom_forYou_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewsBody extends StatelessWidget {
@@ -19,6 +20,8 @@ class HomeViewsBody extends StatelessWidget {
           CustomReleaseWidget(),
           SizedBox(height: 16),
           CustomContinueWatching(),
+          SizedBox(height: 20),
+          CustomForyouWidget(),
         ],
       ),
     );
