@@ -13,28 +13,32 @@ class SearchViews extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(height: 50),
-            Padding(
-              padding: EdgeInsetsGeometry.symmetric(horizontal: 25),
-              child: CustomSearchField(),
-            ),
-            SizedBox(height: 50),
-            CustomSearchCategories(),
-
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "     Most Searched",
-                style: Style.textStyle14.copyWith(fontWeight: FontWeight.w600),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 50),
+              Padding(
+                padding: EdgeInsetsGeometry.symmetric(horizontal: 25),
+                child: CustomSearchField(),
               ),
-            ),
-            SizedBox(height: 10),
-            CustomMostSearch(),
-            SizedBox(height: 20),
-            CustomMostSearch(),
-          ],
+              SizedBox(height: 50),
+              CustomSearchCategories(),
+
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "     Most Searched",
+                  style: Style.textStyle14.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              CustomMostSearch(),
+              SizedBox(height: 20),
+              CustomMostSearch(),
+            ],
+          ),
         ),
       ),
     );
