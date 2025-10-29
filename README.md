@@ -2,6 +2,17 @@
 
 A new Flutter project.
 
+## Screenshots
+
+### Home
+![Home](screenshots/home.png)
+
+### Details
+![Details](screenshots/Details.png)
+
+### Search
+![Search](screenshots/search.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
