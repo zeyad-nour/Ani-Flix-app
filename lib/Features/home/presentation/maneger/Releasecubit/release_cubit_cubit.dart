@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, avoid_print, duplicate_ignore
 
 import 'package:aniflix_app/Features/home/data/model/anime_model/anime_model.dart';
 import 'package:aniflix_app/Features/home/data/repo/home_repo.dart';
@@ -21,8 +21,7 @@ class ReleaseCubitCubit extends Cubit<ReleaseCubitState> {
         emit(ReleaseCubFailure(Failure.errorMessage));
       },
       (Release) {
-        // Debug print هنا بعد ما تجيب البيانات
-        // ignore: avoid_print
+      
         print(Release);
         if (Release.isNotEmpty) {
           // ignore: avoid_print

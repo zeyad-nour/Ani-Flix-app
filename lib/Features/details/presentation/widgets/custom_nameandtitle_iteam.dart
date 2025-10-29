@@ -4,7 +4,8 @@ import 'package:aniflix_app/core/utils/style.dart';
 import 'package:flutter/material.dart';
 
 class CustomNameandtitleIteam extends StatelessWidget {
-  const CustomNameandtitleIteam({super.key});
+  final String title;
+  const CustomNameandtitleIteam({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomNameandtitleIteam extends StatelessWidget {
           SizedBox(height: 20),
           Row(
             children: [
-              Text("Morbius", style: Style.textStyle16.copyWith(fontSize: 40)),
+              Text(title, style: Style.textStyle16.copyWith(fontSize: 40)),
               SizedBox(width: 10),
               Text(
                 "2022",
@@ -41,3 +42,5 @@ class CustomNameandtitleIteam extends StatelessWidget {
     );
   }
 }
+
+//name , score

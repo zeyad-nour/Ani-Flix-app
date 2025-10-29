@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) =>
               ForYouCubit(HomeRepoImple(ApiServesAnime(Dio())))
-                ..featchForYouvideo(),
+                ..featchFor(),
         ),
       ],
 

@@ -1,9 +1,9 @@
 import 'package:aniflix_app/constant.dart';
-import 'package:aniflix_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class CustomImageIteam extends StatelessWidget {
-  const CustomImageIteam({super.key});
+  final String imageUrl;
+  const CustomImageIteam({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CustomImageIteam extends StatelessWidget {
           topRight: Radius.circular(50),
         ),
         image: DecorationImage(
-          image: AssetImage(AssetsData.imageRelease),
+          image: NetworkImage(imageUrl),
           fit: BoxFit.cover,
         ),
       ),

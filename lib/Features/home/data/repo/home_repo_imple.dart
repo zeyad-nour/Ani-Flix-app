@@ -15,7 +15,7 @@ class HomeRepoImple implements HomeRepo {
   Future<Either<Failure, List<AnimeModel>>> featchMoreWatch() async {
     try {
       var data = await apiServesAnime.get("top/anime?filter=bypopularity");
-      var firstAnime = data['data'][0];
+      var firstAnime = data['data'][2];
       AnimeModel anime = AnimeModel(
         title: firstAnime['title'] ?? '',
         imageUrl: firstAnime['images']['jpg']['image_url'] ?? '',
@@ -23,7 +23,7 @@ class HomeRepoImple implements HomeRepo {
       );
       return right([anime]);
     } catch (e) {
-      return left(e.toString() as Failure);
+      return left(ServerFailuer(e.toString()));
     }
   }
 
@@ -61,7 +61,7 @@ class HomeRepoImple implements HomeRepo {
 
       List<dynamic> animeList = data['data'];
 
-      List<AnimeModel> ForyouVideo = animeList.map((item) {
+      List<AnimeModel> suggestions = animeList.map((item) {
         final entry = item['entry'];
         return AnimeModel(
           malId: entry['mal_id'],
@@ -75,7 +75,7 @@ class HomeRepoImple implements HomeRepo {
         );
       }).toList();
 
-      return right(ForyouVideo);
+      return right(suggestions);
     } catch (e) {
       return left(ServerFailuer(e.toString()));
     }

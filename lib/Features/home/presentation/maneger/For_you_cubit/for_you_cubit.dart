@@ -10,10 +10,10 @@ part 'for_you_state.dart';
 class ForYouCubit extends Cubit<ForYouState> {
   ForYouCubit(this.homeRepo) : super(ForYouInitial());
   final HomeRepo homeRepo;
-  Future<void> featchForYouvideo() async {
+  Future<void> featchFor() async {
     emit(ForYouLoding());
 
-    var response = await homeRepo.featchSuggetion();
+    var response = await homeRepo.featchForYouvideo();
 
     response.fold(
       (Failure) {

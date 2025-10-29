@@ -7,7 +7,10 @@ import 'package:aniflix_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class DetailesView extends StatelessWidget {
-  const DetailesView({super.key});
+  final String imagename;
+  final String name;
+
+  const DetailesView({super.key, required this.imagename, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +19,8 @@ class DetailesView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CustomImageIteam(),
-            CustomNameandtitleIteam(),
+            CustomImageIteam(imageUrl: imagename,),
+            CustomNameandtitleIteam(title:name ,),
             SizedBox(height: 20),
             CustomDescriptionIteam(),
             CustomListViewCard(),
