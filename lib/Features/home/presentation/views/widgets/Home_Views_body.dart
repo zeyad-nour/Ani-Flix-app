@@ -23,8 +23,6 @@ class HomeViewsBody extends StatelessWidget {
             CustomContinueWatching(),
             SizedBox(height: 20),
             CustomForyouWidget(),
-
-            
           ],
         ),
       ),

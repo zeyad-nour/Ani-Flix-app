@@ -19,8 +19,7 @@ class ImageRelease extends StatelessWidget {
         image: DecorationImage(
           image: isValidUrl
               ? NetworkImage(imageurl)
-              : AssetImage(AssetsData.imageRelease)
-                    as ImageProvider, 
+              : AssetImage(AssetsData.imageRelease) as ImageProvider,
           fit: BoxFit.cover,
         ),
       ),

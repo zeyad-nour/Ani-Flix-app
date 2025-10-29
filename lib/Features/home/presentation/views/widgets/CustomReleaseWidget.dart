@@ -76,10 +76,4 @@ class CustomReleaseWidget extends StatelessWidget {
   }
 }
 
-
-
-
-
-
-
 // : anime.images?.jpg?.imageUrl ?? ''

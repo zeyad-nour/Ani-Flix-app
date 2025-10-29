@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' hide Transition;
 import 'package:get/get.dart';
 
-
 class ContinueWatchingVidwosSuggetion extends StatelessWidget {
   const ContinueWatchingVidwosSuggetion({super.key});
 

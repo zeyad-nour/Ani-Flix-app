@@ -11,9 +11,7 @@ sealed class ReleaseCubitState extends Equatable {
 
 final class ReleaseCubitInitial extends ReleaseCubitState {}
 
-final class ReleaseCubitLoding extends ReleaseCubitState { 
-  
-}
+final class ReleaseCubitLoding extends ReleaseCubitState {}
 
 final class ReleaseCubitSuccess extends ReleaseCubitState {
   final List<AnimeModel> Release;

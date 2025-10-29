@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:aniflix_app/Features/home/data/model/anime_model/anime_model.dart';
 import 'package:aniflix_app/Features/home/data/model/anime_model/images.dart';
 import 'package:aniflix_app/Features/home/data/repo/home_repo.dart';
@@ -33,12 +35,11 @@ class HomeRepoImple implements HomeRepo {
       List<dynamic> animeList = data['data'];
 
       List<AnimeModel> suggestions = animeList.map((item) {
-        final entry =
-            item['entry']; 
+        final entry = item['entry'];
         return AnimeModel(
           malId: entry['mal_id'],
           title: entry['title'],
-          score: null, 
+          score: null,
           images: entry['images'] != null
               ? Images.fromJson(entry['images'])
               : null,
@@ -52,21 +53,20 @@ class HomeRepoImple implements HomeRepo {
       return left(ServerFailuer(e.toString()));
     }
   }
-  
+
   @override
-  Future<Either<Failure, List<AnimeModel>>> featchForYouvideo() async{
+  Future<Either<Failure, List<AnimeModel>>> featchForYouvideo() async {
     try {
       var data = await apiServesAnime.get("anime/20/recommendations");
 
       List<dynamic> animeList = data['data'];
 
       List<AnimeModel> ForyouVideo = animeList.map((item) {
-        final entry =
-            item['entry']; 
+        final entry = item['entry'];
         return AnimeModel(
           malId: entry['mal_id'],
           title: entry['title'],
-          score: null, 
+          score: null,
           images: entry['images'] != null
               ? Images.fromJson(entry['images'])
               : null,

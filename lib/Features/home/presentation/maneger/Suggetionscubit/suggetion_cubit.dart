@@ -8,13 +8,7 @@ import 'package:equatable/equatable.dart';
 part 'suggetion_state.dart';
 
 class SuggetionCubit extends Cubit<SuggetionState> {
-
-  SuggetionCubit( this.homeRepo)
-
-
-
-
-    : super(SuggetionInitial());
+  SuggetionCubit(this.homeRepo) : super(SuggetionInitial());
   final HomeRepo homeRepo;
   Future<void> featchSuggetions() async {
     emit(SuggetionLoding());
