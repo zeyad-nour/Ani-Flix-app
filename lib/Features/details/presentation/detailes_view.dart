@@ -13,16 +13,18 @@ class DetailesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Column(
-        children: [
-          CustomImageIteam(),
-          CustomNameandtitleIteam(),
-          SizedBox(height: 20),
-          CustomDescriptionIteam(),
-          CustomListViewCard(),
-          SizedBox(height: 16),
-          GradientButton(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomImageIteam(),
+            CustomNameandtitleIteam(),
+            SizedBox(height: 20),
+            CustomDescriptionIteam(),
+            CustomListViewCard(),
+            SizedBox(height: 16),
+            GradientButton(),
+          ],
+        ),
       ),
     );
   }

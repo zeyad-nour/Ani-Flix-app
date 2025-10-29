@@ -17,7 +17,7 @@ class CustomNameandtitleIteam extends StatelessWidget {
           Row(
             children: [
               Text("Morbius", style: Style.textStyle16.copyWith(fontSize: 40)),
-              SizedBox(width: 30),
+              SizedBox(width: 10),
               Text(
                 "2022",
                 style: Style.textStyle14.copyWith(

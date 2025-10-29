@@ -7,7 +7,7 @@ class GradientButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 110.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: MaterialButton(
         elevation: 2,
         splashColor: kBackgroundColor,
