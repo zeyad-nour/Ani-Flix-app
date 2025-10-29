@@ -1,5 +1,6 @@
 import 'package:aniflix_app/Features/home/data/repo/home_repo_imple.dart';
 import 'package:aniflix_app/Features/home/presentation/maneger/Releasecubit/release_cubit_cubit.dart';
+import 'package:aniflix_app/Features/home/presentation/maneger/Suggetionscubit/suggetion_cubit.dart';
 import 'package:aniflix_app/Features/home/presentation/views/home_views.dart';
 import 'package:aniflix_app/core/utils/api_serves.dart';
 import 'package:dio/dio.dart';
@@ -15,8 +16,19 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => ReleaseCubitCubit(HomeRepoImple(ApiServesAnime(Dio())))..featchReleas(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) =>
+              ReleaseCubitCubit(HomeRepoImple(ApiServesAnime(Dio())))
+                ..featchReleas(),
+        ),
+        BlocProvider(
+          create: (context)=>SuggetionCubit(HomeRepoImple(ApiServesAnime(Dio())))..featchSuggetions()
+        ),
+   
+      ],
+
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         darkTheme: ThemeData.dark(),

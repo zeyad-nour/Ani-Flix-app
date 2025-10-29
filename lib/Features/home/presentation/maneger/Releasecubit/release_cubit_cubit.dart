@@ -8,7 +8,12 @@ import 'package:equatable/equatable.dart';
 part 'release_cubit_state.dart';
 
 class ReleaseCubitCubit extends Cubit<ReleaseCubitState> {
+
+
   ReleaseCubitCubit(this.homeRepo) : super(ReleaseCubitInitial());
+
+
+
   final HomeRepo homeRepo;
   Future<void> featchReleas() async {
     emit(ReleaseCubitLoding());
@@ -21,8 +26,10 @@ class ReleaseCubitCubit extends Cubit<ReleaseCubitState> {
       },
       (Release) {
         // Debug print هنا بعد ما تجيب البيانات
+        // ignore: avoid_print
         print(Release); // شوف البيانات كلها
         if (Release.isNotEmpty) {
+          // ignore: avoid_print
           print(Release.first.images?.jpg?.imageUrl); // رابط الصورة
         }
         emit(ReleaseCubitSuccess(Release));
