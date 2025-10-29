@@ -27,10 +27,10 @@ class ReleaseCubitCubit extends Cubit<ReleaseCubitState> {
       (Release) {
         // Debug print هنا بعد ما تجيب البيانات
         // ignore: avoid_print
-        print(Release); // شوف البيانات كلها
+        print(Release); 
         if (Release.isNotEmpty) {
           // ignore: avoid_print
-          print(Release.first.images?.jpg?.imageUrl); // رابط الصورة
+          print(Release.first.images?.jpg?.imageUrl);
         }
         emit(ReleaseCubitSuccess(Release));
       },
