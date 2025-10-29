@@ -12,9 +12,6 @@ class HomeViews extends StatefulWidget {
 class _HomeViewsState extends State<HomeViews> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      backgroundColor: kBackgroundColor,
-      body: HomeViewsBody(),
-    );
+    return Scaffold(backgroundColor: kBackgroundColor, body: HomeViewsBody());
   }
 }

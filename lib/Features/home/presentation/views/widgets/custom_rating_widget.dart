@@ -1,4 +1,3 @@
-
 import 'package:aniflix_app/constant.dart';
 import 'package:aniflix_app/core/utils/style.dart';
 import 'package:flutter/material.dart';
