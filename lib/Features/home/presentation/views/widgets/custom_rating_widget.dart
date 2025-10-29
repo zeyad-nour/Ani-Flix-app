@@ -3,7 +3,8 @@ import 'package:aniflix_app/core/utils/style.dart';
 import 'package:flutter/material.dart';
 
 class CustomRating extends StatelessWidget {
-  const CustomRating({super.key});
+  final double score;
+  const CustomRating({super.key, required this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +22,12 @@ class CustomRating extends StatelessWidget {
         ),
         SizedBox(height: 7),
         Text(
-          "From 342 users",
+          "$score",
           style: Style.textStyle12.copyWith(color: colorFontRegulartitle),
         ),
       ],
     );
   }
 }
+
+//

@@ -26,7 +26,7 @@ class CustomNameandtitleIteam extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              CustomRating(),
+              CustomRating(score: 1),
             ],
           ),
           Text(

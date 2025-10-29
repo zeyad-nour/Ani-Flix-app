@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 part of 'release_cubit_cubit.dart';
 
 sealed class ReleaseCubitState extends Equatable {
@@ -9,7 +11,9 @@ sealed class ReleaseCubitState extends Equatable {
 
 final class ReleaseCubitInitial extends ReleaseCubitState {}
 
-final class ReleaseCubitLoding extends ReleaseCubitState {}
+final class ReleaseCubitLoding extends ReleaseCubitState { 
+  
+}
 
 final class ReleaseCubitSuccess extends ReleaseCubitState {
   final List<AnimeModel> Release;

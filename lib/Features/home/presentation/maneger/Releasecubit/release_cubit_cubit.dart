@@ -12,11 +12,21 @@ class ReleaseCubitCubit extends Cubit<ReleaseCubitState> {
   final HomeRepo homeRepo;
   Future<void> featchReleas() async {
     emit(ReleaseCubitLoding());
+
     var response = await homeRepo.featchMoreWatch();
+
     response.fold(
-      // ignore: avoid_types_as_parameter_names
-      (Failure) => emit(ReleaseCubFailure(Failure.errorMessage)),
-      (Release) => emit(ReleaseCubitSuccess(Release)),
+      (Failure) {
+        emit(ReleaseCubFailure(Failure.errorMessage));
+      },
+      (Release) {
+        // Debug print هنا بعد ما تجيب البيانات
+        print(Release); // شوف البيانات كلها
+        if (Release.isNotEmpty) {
+          print(Release.first.images?.jpg?.imageUrl); // رابط الصورة
+        }
+        emit(ReleaseCubitSuccess(Release));
+      },
     );
   }
 }
