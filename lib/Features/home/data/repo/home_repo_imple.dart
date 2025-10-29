@@ -12,25 +12,36 @@ class HomeRepoImple implements HomeRepo {
   Future<Either<Failure, List<AnimeModel>>> featchMoreWatch() async {
     try {
       var data = await apiServesAnime.get("top/anime?filter=bypopularity");
-           var firstAnime = data['data'][0];
-  AnimeModel anime = AnimeModel(
+      var firstAnime = data['data'][0];
+      AnimeModel anime = AnimeModel(
         title: firstAnime['title'] ?? '',
         imageUrl: firstAnime['images']['jpg']['image_url'] ?? '',
         score: (firstAnime['score'] ?? 0).toDouble(),
       );
       return right([anime]);
-      
     } catch (e) {
-   
       return left(e.toString() as Failure);
     }
   }
-  
+
   @override
-  Future<Either<Failure, List<AnimeModel>>> featchSuggetion() {
-    // TODO: implement featchSuggetion
-    throw UnimplementedError();
+  Future<Either<Failure, List<AnimeModel>>> featchSuggetion() async {
+    try {
+      var data = await apiServesAnime.get("anime/20/recommendations");
+
+      List<dynamic> animeList = data['data'];
+
+      List<AnimeModel> animes = animeList.map((anime) {
+        final entry = anime['entry'];
+        return AnimeModel(
+          title: entry['title'] ?? '',
+          imageUrl: entry['images']['jpg']['image_url'] ?? '',
+        );
+      }).toList();
+
+      return right(animes);
+    } catch (e) {
+      return left(e.toString() as Failure);
+    }
   }
 }
-
-
