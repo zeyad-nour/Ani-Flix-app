@@ -17,7 +17,7 @@ class CustomContinueWatching extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            "     Continue Watching",
+            "     Suggetions Watching",
             style: Style.textStyle14.copyWith(fontSize: 20),
           ),
         ),

@@ -4,4 +4,6 @@ import 'package:dartz/dartz.dart';
 
 abstract class HomeRepo {
   Future<Either<Failure, List<AnimeModel>>> featchMoreWatch();
+  Future<Either<Failure, List<AnimeModel>>> featchSuggetion();
+
 }

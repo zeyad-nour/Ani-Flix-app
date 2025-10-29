@@ -38,7 +38,7 @@ class AnimeModel extends Equatable {
     this.score,
     this.synopsis,
     this.images,
-    this.characters,
+    this.characters, required imageUrl,
   });
 
   factory AnimeModel.fromJson(Map<String, dynamic> json) => AnimeModel(
@@ -63,7 +63,7 @@ class AnimeModel extends Equatable {
         : Images.fromJson(json['images'] as Map<String, dynamic>),
     characters: (json['characters'] as List<dynamic>?)
         ?.map((e) => Character.fromJson(e as Map<String, dynamic>))
-        .toList(),
+        .toList(), imageUrl: null,
   );
 
   Map<String, dynamic> toJson() => {
