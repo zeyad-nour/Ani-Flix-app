@@ -1,9 +1,15 @@
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_card_info.dart';
-import 'package:aniflix_app/core/utils/assets.dart';
+import 'package:aniflix_app/Features/home/data/model/anime_model/character.dart';
 import 'package:flutter/material.dart';
 
 class CustomListViewCard extends StatelessWidget {
-  const CustomListViewCard({super.key});
+  final List<Character> characters;
+  final String imageUrl;
+  const CustomListViewCard({
+    super.key,
+    required this.characters,
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class CustomListViewCard extends StatelessWidget {
         ),
         itemBuilder: (context, index) {
           return CustomCardInfo(
-            imageUrl: AssetsData.imageRelease,
+            imageUrl: imageUrl,
             name: "Maria Espaes",
             role: "As Morbius",
           );
@@ -30,3 +36,7 @@ class CustomListViewCard extends StatelessWidget {
     );
   }
 }
+
+
+//name characters ,
+// 

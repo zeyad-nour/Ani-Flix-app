@@ -3,14 +3,19 @@ import 'package:aniflix_app/Features/details/presentation/widgets/custom_descrip
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_image_iteam.dart';
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_list_view_card.dart';
 import 'package:aniflix_app/Features/details/presentation/widgets/custom_nameandtitle_iteam.dart';
+import 'package:aniflix_app/Features/home/data/model/anime_model/character.dart';
 import 'package:aniflix_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class DetailesView extends StatelessWidget {
   final String imagename;
   final String name;
+  final int episodes;
+  final List<Character> characters;
 
-  const DetailesView({super.key, required this.imagename, required this.name});
+ 
+
+  const DetailesView({super.key, required this.imagename, required this.name, required this.episodes, required this.characters});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +25,10 @@ class DetailesView extends StatelessWidget {
         child: Column(
           children: [
             CustomImageIteam(imageUrl: imagename,),
-            CustomNameandtitleIteam(title:name ,),
+            CustomNameandtitleIteam(title:name,episodes:episodes , ),
             SizedBox(height: 20),
             CustomDescriptionIteam(),
-            CustomListViewCard(),
+            CustomListViewCard(characters: characters,imageUrl: imagename,),
             SizedBox(height: 16),
             GradientButton(),
           ],

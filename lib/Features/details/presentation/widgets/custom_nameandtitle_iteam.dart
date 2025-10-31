@@ -5,7 +5,13 @@ import 'package:flutter/material.dart';
 
 class CustomNameandtitleIteam extends StatelessWidget {
   final String title;
-  const CustomNameandtitleIteam({super.key, required this.title});
+  final int episodes;
+
+  const CustomNameandtitleIteam({
+    super.key,
+    required this.title,
+    required this.episodes,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +37,7 @@ class CustomNameandtitleIteam extends StatelessWidget {
             ],
           ),
           Text(
-            "Marvel Studios",
+            episodes == 0 ? "UnKowon" : "$episodes",
             style: Style.textStyle14.copyWith(
               fontSize: 22,
               color: colorFontRegularsecound,

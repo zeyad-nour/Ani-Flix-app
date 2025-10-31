@@ -6,6 +6,7 @@ class CustomSearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController searchiteam = TextEditingController();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -30,7 +31,8 @@ class CustomSearchField extends StatelessWidget {
               color: const Color(0xFF121212), // dark inner color
               borderRadius: BorderRadius.circular(30),
             ),
-            child: const TextField(
+            child: TextFormField(
+              controller: searchiteam,
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 hintText: "Search for a content.",

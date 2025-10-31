@@ -35,10 +35,10 @@ class ContinueWatchingVidwosSuggetion extends StatelessWidget {
                       onTap: () {
                         Get.to(
                           () => DetailesView(
+                            characters:anime.characters ?? [],
                             imagename: anime.images!.jpg!.imageUrl!,
                             name: anime.title!,
-
-                           
+                            episodes: anime.episodes ?? 0,
                           ),
                           transition: Transition.leftToRight,
                           duration: kTransitionDurition,

@@ -32,8 +32,8 @@ class CustomCardInfo extends StatelessWidget {
                 shape: BoxShape.circle,
                 border: Border.all(width: 2, color: Colors.purpleAccent),
                 image: DecorationImage(
-                  // image: NetworkImage(imageUrl),
-                  image: AssetImage(imageUrl),
+                  image: NetworkImage(imageUrl),
+           
                   fit: BoxFit.cover,
                 ),
               ),

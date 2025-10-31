@@ -27,4 +27,6 @@ class Character extends Equatable {
 
   @override
   List<Object?> get props => [character, role, voiceActors];
+
+  void operator [](String other) {}
 }
